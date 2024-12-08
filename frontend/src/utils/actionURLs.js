@@ -1,4 +1,4 @@
-const API = 'https://book-server-ruby.vercel.app/';
+const API = 'https://book-server-ruby.vercel.app';
 // const API = 'process.env.REACT_APP_API_URL';
 
 const USER_REGISTRATION = `${API}/user/register`;
