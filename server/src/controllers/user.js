@@ -15,7 +15,6 @@ class userService {
       if (userNameDetail) {
         throw errors.Conflict("User name already exists");
       }
-      //encrypt user password
       const encryptedPassword = await new Promise((resolve, reject) => {
         bcrypt.hash(password, 10, (err, res) => {
           if (err) {
@@ -52,16 +51,14 @@ class userService {
           return;
         }
         resolve(res);
-        return;
       });
     });
 
     if (verifyPassword) {
-      //generate token with expiry in 1 hour
       const token = jwt.sign(
         { email: userData?.email, id: userData?._id },
-        process.env.JWT_SECRET, // mysecretkey
-        { expiresIn: 60 * 60 }
+        process.env.JWT_SECRET || "defaultSecret",
+        { expiresIn: "1h" }
       );
       return { ...userData, token, success: true };
     } else {

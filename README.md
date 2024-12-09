@@ -45,7 +45,7 @@ A simple book management application built with React.js (frontend) and Node.js 
     ```plaintext
     # Add .env content for backend
     PORT=8000
-    DB_CONNECTION_URL=DB_CONNECTION_URL=mongodb+srv://Book:book123@demo.euhcpo4.mongodb.net/?retryWrites=true&w=majority&appName=demo
+    DB_CONNECTION_URL=mongodb+srv://Book:book123@demo.euhcpo4.mongodb.net/?retryWrites=true&w=majority&appName=demo
     JWT_SECRET=TQfCctvKgMgHiyxsTaj6664TXtg69YAzb0TCLCftDCXgB2vg
     ```
 
